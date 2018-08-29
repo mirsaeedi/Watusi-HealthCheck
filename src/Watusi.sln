@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Watusi", "Watusi\Watusi.csproj", "{B666B8C1-AACE-47A3-8534-A9BEDC326E55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Watusi.Test", "Watusi.Test\Watusi.Test.csproj", "{1F05E432-6D64-4563-BAA7-56BA3D29F3F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B666B8C1-AACE-47A3-8534-A9BEDC326E55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B666B8C1-AACE-47A3-8534-A9BEDC326E55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B666B8C1-AACE-47A3-8534-A9BEDC326E55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B666B8C1-AACE-47A3-8534-A9BEDC326E55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F05E432-6D64-4563-BAA7-56BA3D29F3F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F05E432-6D64-4563-BAA7-56BA3D29F3F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F05E432-6D64-4563-BAA7-56BA3D29F3F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F05E432-6D64-4563-BAA7-56BA3D29F3F9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BA335C36-2B9D-4355-922C-C3EDD127B013}
+	EndGlobalSection
+EndGlobal
