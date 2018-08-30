@@ -10,9 +10,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Watusi.Infrastructure.Network;
-using Watusi.Test.Jobs;
+using Watusi.Samples.Jobs;
 
-namespace Watusi.Test
+namespace Watusi.Samples
 {
     public class Startup
     {

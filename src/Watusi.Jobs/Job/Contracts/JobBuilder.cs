@@ -7,14 +7,14 @@ namespace Watusi
 {
     public abstract class JobBuilder
     {
-        private ILogger _logger;
-        public JobBuilder(ILogger logger)
+        protected ILogger Logger  { get; private set; }
+        public JobBuilder(ILogger logger=null)
         {
-            _logger = logger;
+            Logger = logger;
         }
         public void Run()
         {
-            JobRuntimEnvironment.RunJob(Build(), _logger);
+            JobRuntimEnvironment.RunJob(Build(), Logger);
         }
         protected abstract IJob Build();
     }

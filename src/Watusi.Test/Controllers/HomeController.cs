@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Watusi.Test.Models;
+using Watusi.Samples.Models;
 
-namespace Watusi.Test.Controllers
+namespace Watusi.Samples.Controllers
 {
     public class HomeController : Controller
     {

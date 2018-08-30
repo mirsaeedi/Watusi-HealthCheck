@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Watusi.HealthChecks", "Watusi\Watusi.HealthChecks.csproj", "{B666B8C1-AACE-47A3-8534-A9BEDC326E55}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Watusi.Test", "Watusi.Test\Watusi.Test.csproj", "{1F05E432-6D64-4563-BAA7-56BA3D29F3F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Watusi.Samples", "Watusi.Test\Watusi.Samples.csproj", "{1F05E432-6D64-4563-BAA7-56BA3D29F3F9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Watusi.Jobs", "Watusi.Jobs\Watusi.Jobs.csproj", "{1AD5076F-DA85-4791-8630-123274618771}"
 EndProject

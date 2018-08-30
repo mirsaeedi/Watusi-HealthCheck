@@ -1,6 +1,6 @@
 using System;
 
-namespace Watusi.Test.Models
+namespace Watusi.Samples.Models
 {
     public class ErrorViewModel
     {

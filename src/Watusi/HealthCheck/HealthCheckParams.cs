@@ -6,6 +6,11 @@ namespace Watusi.HealthChecks
 {
     public class HealthCheckParams<THealthCheckParams,TResult> 
     {
+        public HealthCheckParams(Action<string, HealthCheckResult<THealthCheckParams, TResult>> notify)
+        {
+            Notify = notify;
+        }
+
         public Action<string, HealthCheckResult<THealthCheckParams,TResult>> Notify { get; set; }
         public string HealthyMessageTemplate { get; set; }
         public string UnHealthyMessageTemplate { get; set; }

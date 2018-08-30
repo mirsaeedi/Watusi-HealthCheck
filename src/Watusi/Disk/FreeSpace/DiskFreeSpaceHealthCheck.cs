@@ -8,13 +8,13 @@ using System.Linq;
 
 namespace Watusi.HealthChecks
 {
-    public class DiskHealthCheck : HealthCheck<DiskHealthCheckParams, long>
+    public class DiskFreeSpaceHealthCheck : HealthCheck<DiskFreeSpaceHealthCheckParams, long>
     {
         
-        private DiskHealthCheckParams _params;
-        public override string Name => $"Disk({_params.DriveName})";
+        private DiskFreeSpaceHealthCheckParams _params;
+        public override string Name => $"DiskFreeSpace({_params.DriveName})";
 
-        public DiskHealthCheck(DiskHealthCheckParams healthCheckParams) : base(healthCheckParams)
+        public DiskFreeSpaceHealthCheck(DiskFreeSpaceHealthCheckParams healthCheckParams) : base(healthCheckParams)
         {
             _params = healthCheckParams;
         }

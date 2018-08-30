@@ -15,7 +15,7 @@ namespace Watusi
         public event JobExceptionEventHandler RaiseJobExceptionEvent;
 
         protected ILogger _logger;
-        public string Name { get; set; }
+        public string Name { get; private set; }
         protected IJobContext _jobContext;
         private Func<IJobContext, Task> _middleware;
         private Policy _policy;
