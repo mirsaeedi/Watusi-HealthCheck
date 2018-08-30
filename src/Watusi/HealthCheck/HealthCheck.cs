@@ -44,7 +44,8 @@ namespace Watusi.HealthChecks
         {
             var message = _healthCheckParams.WarningMessageTemplate
                             .Replace("{name}", Name)
-                            .Replace("{result}", healthCheckResult.Result.ToString());
+                            .Replace("{result}", healthCheckResult.Result.ToString())
+                            .Replace("{status}", HealthCheckStatus.Healthy.ToString());
 
             _healthCheckParams.Notify(message, healthCheckResult);
         }
@@ -53,7 +54,8 @@ namespace Watusi.HealthChecks
         {
             var message = _healthCheckParams.UnHealthyMessageTemplate
                 .Replace("{name}", Name)
-                .Replace("{result}", healthCheckResult.Result.ToString());
+                .Replace("{result}", healthCheckResult.Result.ToString())
+                .Replace("{status}", HealthCheckStatus.Healthy.ToString());
 
             _healthCheckParams.Notify(message, healthCheckResult);
         }
@@ -61,7 +63,8 @@ namespace Watusi.HealthChecks
         {
             var message = _healthCheckParams.HealthyMessageTemplate
                 .Replace("{name}", Name)
-                .Replace("{result}", healthCheckResult.Result.ToString());
+                .Replace("{result}", healthCheckResult.Result.ToString())
+                .Replace("{status}", HealthCheckStatus.Healthy.ToString());
 
             _healthCheckParams.Notify(message, healthCheckResult);
         }

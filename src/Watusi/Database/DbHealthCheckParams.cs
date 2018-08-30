@@ -10,7 +10,7 @@ namespace Watusi.HealthChecks
         public DbHealthCheckParams(string connectionString, string query,
             Func<TReturn, HealthCheckStatus> decideStatus, Action<string, HealthCheckResult<DbHealthCheckParams<TReturn>, TReturn>> notify):base(notify)
         {
-            connectionString = ConnectionString;
+            ConnectionString = connectionString;
             Query = query;
             DecideStatus = decideStatus;
         }

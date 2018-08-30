@@ -19,7 +19,7 @@ namespace Watusi.Samples.Jobs
             job.Use((_) =>
             {
                 var diskFreeSpaceCheck = new DiskFreeSpaceHealthCheck(
-                    new DiskFreeSpaceHealthCheckParams("C:"
+                    new DiskFreeSpaceHealthCheckParams("C:\\"
                     , (fs) => fs < 10000 ? HealthCheckStatus.Healthy : HealthCheckStatus.Unhealthy
                     , (m, r) => Console.WriteLine(m)));
 
@@ -28,7 +28,7 @@ namespace Watusi.Samples.Jobs
             .Use((_) =>
             {
                 var fileSystemHealthCheck = new FileSystemHealthCheck(
-                    new FileSystemHealthCheckParams("C:\fileToCheck.txt"
+                    new FileSystemHealthCheckParams("C:\\fileToCheck.txt"
                     , (exists) => exists ? HealthCheckStatus.Healthy : HealthCheckStatus.Unhealthy
                     , (m, r) => Console.WriteLine(m)));
 

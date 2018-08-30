@@ -11,6 +11,7 @@ namespace Watusi.HealthChecks
             , Action<string, HealthCheckResult<FileSystemHealthCheckParams, bool>> notify):base(notify)
         {
             Path = path;
+            DecideStatus = decideStatus;
         }
         public string Path { get; set; }
 

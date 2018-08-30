@@ -67,7 +67,7 @@ namespace Watusi
             {
                 foreach (var (middleware, policy) in _middlewares)
                 {
-                    if (!_jobContext.ContinueChain)
+                    if (_jobContext?.ContinueChain==false)
                         return;
 
                     _logger?.LogInformation("Job {jobName} executes middleware {middlewareName}", Name,middleware.GetType().Name);
@@ -80,7 +80,6 @@ namespace Watusi
             catch (Exception ex)
             {
                 OnRaiseJobExceptionEvent(new JobExceptionEventArgs(this,ex));
-                throw; // re thrown exception
             }
             
         }

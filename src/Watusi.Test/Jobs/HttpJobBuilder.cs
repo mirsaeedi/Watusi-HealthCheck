@@ -16,7 +16,7 @@ namespace Watusi.Samples.Jobs
             var job = new SimpleJob(Logger,"HttpCheck");
             job.RaiseJobExceptionEvent += Job_RaiseJobExceptionEvent;
 
-            var policy = Policy.Handle<HttpRequestException>().WaitAndRetry(new[]
+            var policy = Policy.Handle<HttpRequestException>().WaitAndRetryAsync(new[]
                         {
                             TimeSpan.FromSeconds(1),
                             TimeSpan.FromSeconds(2),
@@ -25,7 +25,7 @@ namespace Watusi.Samples.Jobs
 
             job.Use((_) =>
             {
-                var httpCheck = new HttpHealthCheck(new HttpHealthCheckParams("google.com", (m, r) => Console.WriteLine(m)));
+                var httpCheck = new HttpHealthCheck(new HttpHealthCheckParams("http://google.com", (m, r) => Console.WriteLine(m)));
                 return httpCheck.Beat();
             }, policy);
 

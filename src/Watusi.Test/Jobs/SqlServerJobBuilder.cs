@@ -16,9 +16,9 @@ namespace Watusi.Samples.Jobs
         {
             var job = new PipelineJob(Logger, "SqlServerCheck");
             job.RaiseJobExceptionEvent += Job_RaiseJobExceptionEvent;
-            var dbServerIP = IPAddress.Parse("1.1.1.1");
+            var dbServerIP = IPAddress.Parse("127.0.0.1");
 
-            var policy = Policy.Handle<HttpRequestException>().WaitAndRetry(new[]
+            var policy = Policy.Handle<HttpRequestException>().WaitAndRetryAsync(new[]
                         {
                             TimeSpan.FromSeconds(1),
                             TimeSpan.FromSeconds(2),
@@ -28,8 +28,8 @@ namespace Watusi.Samples.Jobs
             job.Use((_) =>
             {
                 var sqlQueryCheck = new SqlServerHealthCheck<int>(new DbHealthCheckParams<int>(
-                    connectionString: "google.com"
-                    ,query : "SELECT 1"
+                    connectionString: "Server=(localdb)\\mssqllocaldb;Database=WatusiHangfire;Trusted_Connection=True;"
+                    , query : "SELECT 1"
                     ,decideStatus : r=>r==1?HealthCheckStatus.Healthy:HealthCheckStatus.Unhealthy
                     ,notify: (m, r) => Console.WriteLine(m)));
                 return sqlQueryCheck.Beat();
@@ -38,7 +38,7 @@ namespace Watusi.Samples.Jobs
             {
             var telnetCheck = new TelnetHealthCheck(new TelnetHealthCheckParams(
                     ipAddress: dbServerIP
-                    , dnsName : null
+                    ,dnsName : null
                     ,port: 1433
                     ,retryCount:3
                     , notify: (m, r) => Console.WriteLine(m)));

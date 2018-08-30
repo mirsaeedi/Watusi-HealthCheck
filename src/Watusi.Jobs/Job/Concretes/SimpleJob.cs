@@ -44,7 +44,6 @@ namespace Watusi
             catch (Exception ex)
             {
                 OnRaiseJobExceptionEvent(new JobExceptionEventArgs(this, ex));
-                throw; // re thrown exception
             }
 
             _logger?.LogInformation("Job {jobName} finished", Name);

@@ -6,12 +6,17 @@
 
   <ItemGroup>
     <PackageReference Include="Hangfire" Version="1.6.20" />
+    <PackageReference Include="Hangfire.AspNetCore" Version="1.6.20" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Watusi.Jobs\Watusi.Jobs.csproj" />
     <ProjectReference Include="..\Watusi\Watusi.HealthChecks.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="App_Data\" />
   </ItemGroup>
 
 </Project>

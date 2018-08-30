@@ -12,8 +12,8 @@ namespace Watusi.HealthChecks
         }
 
         public Action<string, HealthCheckResult<THealthCheckParams,TResult>> Notify { get; set; }
-        public string HealthyMessageTemplate { get; set; }
-        public string UnHealthyMessageTemplate { get; set; }
-        public string WarningMessageTemplate { get; set; }
+        public string HealthyMessageTemplate { get; set; } = "HealthCheck: {name}, Result={result},State={status}";
+        public string UnHealthyMessageTemplate { get; set; } = "HealthCheck: {name}, Result={result},State={status}";
+        public string WarningMessageTemplate { get; set; } = "HealthCheck: {name}, Result={result},State={status}";
     }
 }

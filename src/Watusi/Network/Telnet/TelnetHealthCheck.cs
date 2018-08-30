@@ -10,7 +10,7 @@ namespace Watusi.HealthChecks
     {
         private TelnetHealthCheckParams _params;
 
-        public override string Name => $"Telnet({_params.IpAddress.ToString() ?? _params.DnsName}:{_params.Port})";
+        public override string Name => $"Telnet({_params.IPAddress.ToString() ?? _params.DnsName}:{_params.Port})";
 
         public TelnetHealthCheck(TelnetHealthCheckParams healthCheckParams) :base(healthCheckParams)
         {
@@ -48,7 +48,7 @@ namespace Watusi.HealthChecks
                     client.SendTimeout = timeout;
 
                     if (_params.DnsName == null)
-                        await client.ConnectAsync(_params.IpAddress, _params.Port);
+                        await client.ConnectAsync(_params.IPAddress, _params.Port);
                     else
                         await client.ConnectAsync(_params.DnsName, _params.Port);
 

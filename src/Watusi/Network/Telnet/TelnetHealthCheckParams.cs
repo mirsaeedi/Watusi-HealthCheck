@@ -18,6 +18,6 @@ namespace Watusi.HealthChecks
         public IPAddress IPAddress { get; set; }
         public string DnsName { get; set; }
         public int Port { get; set; }
-        public int RetryCount { get; set; };
+        public int RetryCount { get; set; }
     }
 }
