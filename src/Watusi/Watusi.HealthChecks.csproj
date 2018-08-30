@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>Watusi.HealthChecks</AssemblyName>
+    <RootNamespace>Watusi.HealthChecks</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="CPU\Temprature\" />
+    <Folder Include="CPU\Usage\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.5.1" />
+  </ItemGroup>
+
+</Project>

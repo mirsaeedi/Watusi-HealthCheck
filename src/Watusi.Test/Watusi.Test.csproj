@@ -10,7 +10,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Watusi\Watusi.csproj" />
+    <Folder Include="Jobs\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Watusi\Watusi.HealthChecks.csproj" />
   </ItemGroup>
 
 </Project>
